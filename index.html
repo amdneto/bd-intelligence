@@ -215,115 +215,56 @@ span.hl-text { color: #111; }
 .urgency-hdr.urgency-2 { background: #FEF5E7; color: #D35400; border-left: 4px solid #E67E22; }
 .urgency-hdr.urgency-1 { background: #EAF2F8; color: #1A5276; border-left: 4px solid #2980B9; }
 
-/* ===== v34: AI Intelligence panel (Gemini enrichment) ===== */
-.ai-panel {
-  margin: 7px 0 5px 0;
-  padding: 9px 12px;
-  background: #f0f7ff;
-  border: 1px solid #cce0ff;
-  border-radius: 5px;
-  font-size: 12px;
+/* ===== v37: RELATED PROCUREMENT tab ===== */
+.proc-intro {
+  background: #f3eef9; border: 1px solid #d7bfe8; border-radius: 6px;
+  padding: 10px 14px; margin-bottom: 16px; font-size: 13px; color: #4a235a;
 }
-.ai-panel-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
+.proc-stat { font-weight: 700; }
+.proc-block {
+  background: #fff; border: 1px solid #e0d5ee; border-radius: 7px;
+  margin-bottom: 14px; overflow: hidden;
 }
-.ai-badge {
-  font-size: 10.5px;
-  font-weight: 700;
-  color: #1a5276;
-  background: #d6eaf8;
-  border: 1px solid #aed6f1;
-  border-radius: 3px;
-  padding: 2px 6px;
-  letter-spacing: 0.3px;
+.proc-block-hit { border-left: 4px solid #6C3483; }
+.proc-block-miss { border-left: 4px solid #ccc; opacity: 0.85; }
+.proc-inv-hdr {
+  background: #f9f5fd; padding: 10px 14px 8px; border-bottom: 1px solid #e8ddf5;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
 }
-.ai-case-type {
-  font-size: 11px;
-  color: #555;
-  font-style: italic;
+.proc-urg-dot {
+  display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+  flex-shrink: 0; margin-right: 4px;
 }
-.ai-parties {
-  margin-bottom: 5px;
-  color: #333;
-  line-height: 1.6;
+.proc-inv-link {
+  font-weight: 700; font-size: 13.5px; color: #4a235a; text-decoration: none;
 }
-.ai-party {
-  display: inline-block;
-  background: #eaf4fb;
-  border: 1px solid #aed6f1;
-  border-radius: 3px;
-  padding: 1px 6px;
-  margin: 1px 3px 1px 0;
-  font-size: 11px;
-  color: #1a5276;
+.proc-inv-link:hover { text-decoration: underline; }
+.proc-inv-title { font-weight: 700; font-size: 13.5px; color: #4a235a; }
+.proc-chips { padding: 4px 14px 6px; display: flex; flex-wrap: wrap; gap: 5px; }
+.proc-chip {
+  display: inline-block; border-radius: 10px; padding: 2px 9px;
+  font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em;
 }
-.ai-actions {
-  color: #333;
+.proc-chip-sector { background: #ede0f9; color: #6C3483; border: 1px solid #d7bfe8; }
+.proc-chip-reg    { background: #e8f4fd; color: #1A5276; border: 1px solid #aed6f1; }
+.proc-tenders-wrap { padding: 8px 14px 12px; }
+.proc-tender {
+  border-bottom: 1px dashed #e5d9f5; padding: 8px 0 9px;
 }
-.ai-ap-list {
-  margin: 4px 0 0 0;
-  padding-left: 18px;
+.proc-tender:last-child { border-bottom: none; }
+.proc-tender-title a {
+  font-size: 13px; font-weight: 600; color: #2c3e50; text-decoration: none;
 }
-.ai-ap-list li {
-  margin-bottom: 3px;
-  line-height: 1.45;
-  color: #1a3a5c;
+.proc-tender-title a:hover { color: #6C3483; text-decoration: underline; }
+.proc-tender-desc { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.45; }
+.proc-tender-meta {
+  font-size: 11px; color: #888; margin-top: 4px; display: flex;
+  flex-wrap: wrap; gap: 0 14px;
 }
-
-/* ===== v36: FOLLOW-UP ACTIONS tab ===== */
-.fu-credit {
-  font-size: 11px; color: #888; margin-bottom: 18px;
-  padding: 6px 10px; background: #f8f8f8; border-radius: 4px;
-  border-left: 3px solid #ccc;
+.proc-tender-src  { font-weight: 600; color: #6C3483; }
+.proc-none {
+  font-size: 12.5px; color: #888; font-style: italic; padding: 10px 0 4px;
 }
-.fu-themes {
-  margin-bottom: 18px; font-size: 13px; color: #333;
-  padding: 10px 14px; background: #eef6ff;
-  border: 1px solid #c5ddf7; border-radius: 6px;
-}
-.fu-theme {
-  display: inline-block; background: #1a5276; color: #fff;
-  border-radius: 4px; padding: 2px 10px; margin: 2px 4px 2px 0;
-  font-size: 12px; font-weight: 600;
-}
-.fu-group {
-  margin-bottom: 22px; border-radius: 7px; overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-.fu-group-hdr {
-  font-size: 13px; font-weight: 700; padding: 9px 14px;
-  letter-spacing: 0.4px;
-}
-.fu-group-red  .fu-group-hdr { background: #FDEDEC; color: #922B21; border-left: 4px solid #E74C3C; }
-.fu-group-amber .fu-group-hdr { background: #FEF5E7; color: #D35400; border-left: 4px solid #E67E22; }
-.fu-group-blue .fu-group-hdr { background: #EAF2F8; color: #1A5276; border-left: 4px solid #2980B9; }
-.fu-card {
-  background: #fff; padding: 12px 16px; border-bottom: 1px solid #f0f0f0;
-}
-.fu-card:last-child { border-bottom: none; }
-.fu-action {
-  font-size: 14px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px;
-  line-height: 1.4;
-}
-.fu-why {
-  font-size: 12px; color: #555; font-style: italic; margin-bottom: 6px;
-}
-.fu-team {
-  display: inline-block; font-size: 11px; font-weight: 700;
-  background: #1A6B3C; color: #fff; border-radius: 3px;
-  padding: 2px 8px; margin-bottom: 6px;
-}
-.fu-sources { font-size: 11.5px; color: #666; margin-top: 5px; }
-.fu-ref {
-  display: inline-block; background: #f0f4f8;
-  border: 1px solid #d0dce8; border-radius: 3px;
-  padding: 1px 7px; margin: 2px 4px 2px 0;
-  font-size: 11px; color: #1a5276; text-decoration: none;
-}
-.fu-ref:hover { background: #d6eaf8; }
 
 /* ===== TOP STORIES tab (v20: GCR-style card grid, first tab) ===== */
 .ts-grid {
@@ -533,17 +474,17 @@ footer {
 
 <div class="digest-header">
   <h1>&#128203;&nbsp; BD Competition Intelligence</h1>
-  <div class="digest-date">Monday, 23 March 2026 &nbsp;&middot;&nbsp; Lookback: 72h news / 60d tenders &nbsp;&middot;&nbsp; 33 items</div>
+  <div class="digest-date">Monday, 23 March 2026 &nbsp;&middot;&nbsp; Lookback: 72h news / 60d tenders &nbsp;&middot;&nbsp; 32 items</div>
 </div>
 
 <div class="tab-bar">
 <button class="tab-btn active" data-tab="bd_radar" style="--acc:#1C2833" onclick="showTab('bd_radar')">&#128680; BD RADAR <span class="tab-n">5</span></button>
-<button class="tab-btn" data-tab="followup" style="--acc:#1A6B3C" onclick="showTab('followup')">&#129302; FOLLOW-UP ACTIONS <span class="tab-n">0</span></button>
+<button class="tab-btn" data-tab="procurement" style="--acc:#6C3483" onclick="showTab('procurement')">&#128203; RELATED PROCUREMENT <span class="tab-n">1</span></button>
 <button class="tab-btn" data-tab="europe_map" style="--acc:#1A5276" onclick="showTab('europe_map')">&#127758; EUROPE MAP <span class="tab-n">17</span></button>
 <button class="tab-btn" data-tab="market_assessments" style="--acc:#1A3A5C" onclick="showTab('market_assessments')">MARKET ASSESSMENTS <span class="tab-n">0</span></button>
-<button class="tab-btn" data-tab="digital_markets" style="--acc:#1F618D" onclick="showTab('digital_markets')">DIGITAL MARKETS &amp; REGULATED SECTORS <span class="tab-n">9</span></button>
-<button class="tab-btn" data-tab="merger_control" style="--acc:#922B21" onclick="showTab('merger_control')">MERGER CONTROL <span class="tab-n">9</span></button>
-<button class="tab-btn" data-tab="enforcement" style="--acc:#D35400" onclick="showTab('enforcement')">COMPETITION &amp; CONSUMER ENFORCEMENT <span class="tab-n">10</span></button>
+<button class="tab-btn" data-tab="digital_markets" style="--acc:#1F618D" onclick="showTab('digital_markets')">DIGITAL MARKETS &amp; REGULATED SECTORS <span class="tab-n">10</span></button>
+<button class="tab-btn" data-tab="merger_control" style="--acc:#922B21" onclick="showTab('merger_control')">MERGER CONTROL <span class="tab-n">8</span></button>
+<button class="tab-btn" data-tab="enforcement" style="--acc:#D35400" onclick="showTab('enforcement')">COMPETITION &amp; CONSUMER ENFORCEMENT <span class="tab-n">9</span></button>
 <button class="tab-btn" data-tab="consumer_protection" style="--acc:#7D3C98" onclick="showTab('consumer_protection')">CONSUMER PROTECTION <span class="tab-n">0</span></button>
 <button class="tab-btn" data-tab="collective_actions" style="--acc:#0E6655" onclick="showTab('collective_actions')">COLLECTIVE ACTIONS &amp; DISPUTES <span class="tab-n">2</span></button>
 <button class="tab-btn" data-tab="subsidy_control" style="--acc:#1D6A39" onclick="showTab('subsidy_control')">SUBSIDY CONTROL <span class="tab-n">3</span></button>
@@ -564,7 +505,12 @@ footer {
 <div class="radar-card" style="border-left-color:#28B463"><div class="radar-header"><span class="opp-badge" style="background:#28B463">SUBSIDY ASSESSMENT</span><span class="radar-section">SUBSIDY CONTROL</span></div><div class="radar-headline"><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_655" target="_blank" class="hl-link">Commission approves €5 billion Danish State aid scheme to support offshore wind energy</a></div><div class="radar-note">&#128188; SCA/State Aid compliance assessment — market operator principle and distortion test</div><div class="radar-meta">22 Mar 2026  23:00 &nbsp;|&nbsp; EC — Competition press releases &nbsp;|&nbsp; Danish, European</div></div>
 <div class="radar-card" style="border-left-color:#28B463"><div class="radar-header"><span class="opp-badge" style="background:#28B463">SUBSIDY ASSESSMENT</span><span class="radar-section">SUBSIDY CONTROL</span></div><div class="radar-headline"><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_656" target="_blank" class="hl-link">Commission approves French State aid scheme for production of renewable and low-carbon hydrogen</a></div><div class="radar-note">&#128188; SCA/State Aid compliance assessment — market operator principle and distortion test</div><div class="radar-meta">22 Mar 2026  23:00 &nbsp;|&nbsp; EC — Competition press releases &nbsp;|&nbsp; French, EU</div></div>
 <div class="radar-card" style="border-left-color:#2980B9"><div class="radar-header"><span class="opp-badge" style="background:#2980B9">DIGITAL MARKETS</span><span class="radar-section">DIGITAL MARKETS AND REGULATED SECTORS</span></div><div class="radar-headline"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbEtia0FKMTE0ckloMXpscW9GS09kTEpfaFhhZFFDMW85b2NuTXlXYlVQdFRSaUp0YVlrazNzUF9LbWZLb09VRGlEaGZnNmRscW5TM3NBYVNFN0tpWkVsb2ZWMERRYmNzNWFTVVhERjRjZFNjSnVuRWxBZ296ck5ydjBYUUFZWGZxMUJPM2Jnei02cDRSNzJpb1VnQnFFOG9RZXFTNzFJTXU?oc=5" target="_blank" class="hl-link">Sixth meeting of the Digital Markets Act High-Level Group</a></div><div class="radar-note">&#128188; Digital regime — regulatory impact assessment and compliance strategy support</div><div class="radar-meta">20 Mar 2026  20:39 &nbsp;|&nbsp; digital-markets-act.ec.europa.eu</div></div></div>
-<div class="tab-pane" id="pane-followup"><h2 class="sec-hdr">PROPOSED FOLLOW-UP ACTIONS <span class="sec-n">(0)</span></h2><p class="empty-msg" style="padding:24px;">Action plan could not be generated — check the log for details.</p></div>
+<div class="tab-pane" id="pane-procurement"><h2 class="sec-hdr">RELATED RFPs &amp; ITTs &mdash; Procurement Linked to Investigations <span class="sec-n">(1)</span></h2><div class="proc-intro"><strong>&#128269; Logic:</strong> For each investigation or market study flagged in the BD Radar, this tab searches UK Contracts Finder and competition news for related RfPs, ITTs and economic consultancy tenders — opportunities that arise when companies, law firms or regulators commission expert economic analysis in response to regulatory scrutiny.<span class="proc-stat"> 1 procurement signal(s) found across 5 investigations.</span></div>
+<div class="proc-block proc-block-miss" style="border-left-color:#E67E22"><div class="proc-inv-hdr"><span class="proc-urg-dot" style="background:#E67E22"></span><a href="https://www.ccpc.ie/business/ccpc-welcomes-public-consultation-on-proposed-changes-to-merger-notification-thresholds/" target="_blank" class="proc-inv-link">CCPC welcomes public consultation on proposed changes to merger notification thresholds</a></div><div class="proc-chips"><span class="proc-chip proc-chip-reg">CCPC</span></div><div class="proc-tenders-wrap"><div class="proc-none">No procurement signals found yet — monitoring active.</div></div></div>
+<div class="proc-block proc-block-miss" style="border-left-color:#E67E22"><div class="proc-inv-hdr"><span class="proc-urg-dot" style="background:#E67E22"></span><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5wMFpJd1Z3V2J5N29ORHEtbDAwQUJCdVJkZ1dsbWplcUc5dmQ2TS1QcWtkWDBqZFE1VjJvMHhtYVpwZ0daVVVYUFg0czRBalpzUlpOTVZ4YnlNQmxxVGRHQ0hGT3NxWWZVQkJCRW12RFgxR3RwdFowbWN0OA?oc=5" target="_blank" class="proc-inv-link">FCA Opens Investigation into MFS -</a></div><div class="proc-chips"><span class="proc-chip proc-chip-sector">finance</span> <span class="proc-chip proc-chip-reg">FCA</span></div><div class="proc-tenders-wrap"><div class="proc-none">No procurement signals found yet — monitoring active.</div></div></div>
+<div class="proc-block proc-block-miss" style="border-left-color:#2980B9"><div class="proc-inv-hdr"><span class="proc-urg-dot" style="background:#2980B9"></span><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_655" target="_blank" class="proc-inv-link">Commission approves €5 billion Danish State aid scheme to support offshore wind energy</a></div><div class="proc-chips"><span class="proc-chip proc-chip-sector">energy</span> <span class="proc-chip proc-chip-sector">digital</span> <span class="proc-chip proc-chip-reg">EC</span></div><div class="proc-tenders-wrap"><div class="proc-none">No procurement signals found yet — monitoring active.</div></div></div>
+<div class="proc-block proc-block-miss" style="border-left-color:#2980B9"><div class="proc-inv-hdr"><span class="proc-urg-dot" style="background:#2980B9"></span><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_26_656" target="_blank" class="proc-inv-link">Commission approves French State aid scheme for production of renewable and low-carbon hydrogen</a></div><div class="proc-chips"><span class="proc-chip proc-chip-sector">energy</span> <span class="proc-chip proc-chip-sector">digital</span> <span class="proc-chip proc-chip-sector">automotive</span> <span class="proc-chip proc-chip-reg">EC</span></div><div class="proc-tenders-wrap"><div class="proc-none">No procurement signals found yet — monitoring active.</div></div></div>
+<div class="proc-block proc-block-hit" style="border-left-color:#2980B9"><div class="proc-inv-hdr"><span class="proc-urg-dot" style="background:#2980B9"></span><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbEtia0FKMTE0ckloMXpscW9GS09kTEpfaFhhZFFDMW85b2NuTXlXYlVQdFRSaUp0YVlrazNzUF9LbWZLb09VRGlEaGZnNmRscW5TM3NBYVNFN0tpWkVsb2ZWMERRYmNzNWFTVVhERjRjZFNjSnVuRWxBZ296ck5ydjBYUUFZWGZxMUJPM2Jnei02cDRSNzJpb1VnQnFFOG9RZXFTNzFJTXU?oc=5" target="_blank" class="proc-inv-link">Sixth meeting of the Digital Markets Act High-Level Group</a></div><div class="proc-chips"><span class="proc-chip proc-chip-sector">digital</span></div><div class="proc-tenders-wrap"><div class="proc-tender"><div class="proc-tender-title"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxONVJYV240Z0lDTHRISG1pM2tXMjdyWmtTSGFMdDFxRzBYNFBQa05BUkp4cmhZd1JJU2xDQTg0UVp6S3pjdzVsSFBlV3VaOGhORy1WaXhEeDE1MXAzZk9HZ25ablNxV0tqWlBwOHZPUkU0OVJZLW40RmFCOUZadlE3Q01XTXZmWldqdE9zXzh6REl6aElxaEJicXZGeVhHN1NvRWc?oc=5" target="_blank">Update on the procurement for Digital Gilt Instrument (DIGIT) Pilot</a></div><div class="proc-tender-desc">Update on the procurement for Digital Gilt Instrument (DIGIT) Pilot GOV.UK</div><div class="proc-tender-meta">GOV.UK &nbsp;|&nbsp; NA</div></div></div></div></div>
 <div class="tab-pane" id="pane-europe_map"><h2 class="sec-hdr">COMPETITION NEWS MAP &mdash; Europe &amp; UK <span class="sec-n">(17)</span></h2><div id="map-wrap" style="display:flex;gap:0;border:1px solid #e8e8e8;border-radius:6px;overflow:hidden;height:660px;margin:0 -32px;width:calc(100% + 64px);">
 
 <!-- Left: map SVG -->
@@ -603,8 +549,8 @@ footer {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" crossorigin="anonymous"></script>
 <script>
 (function() {
-var articleData = {"FIN":[{"title":"The time limit for processing the merger of Saferoad, Cleanosol and Tiemerkintä A & E has been extended until 8 May 2026","link":"https://www.kkv.fi/en/current/press-releases/the-time-limit-for-processing-the-merger-of-saferoad-cleanosol-and-tiemerkinta-a-e-has-been-extended-until-8-may-2026/","source":"KKV — Finnish Competition and Consumer Authority","date":"08 May 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"IRL":[{"title":"CCPC welcomes public consultation on proposed changes to merger notification thresholds","link":"https://www.ccpc.ie/business/ccpc-welcomes-public-consultation-on-proposed-changes-to-merger-notification-thresholds/","source":"CCPC (Ireland)","date":"23 Mar 2026","section":"MERGER CONTROL","opp":"M&A CLEARANCE","opp_col":"#E74C3C","cat":"COMPETITION"}],"DNK":[{"title":"Developers threaten appeal to EU Court of Justice following Denmark's major subsidy approval","link":"https://news.google.com/rss/articles/CBMie0FVX3lxTE5qSXpkcjNZMVVkakNhNFZ2TDAxOVVXR19Eb0JBNm1NX0FWZnAxN245Q0xULXhZM3pacjFiMFpId0FxQjdSWDVRWWpvMmUtekpJUDVYNzJOVk9qRjlhb3lTdTJiMGtiTHQzMHJzODNnQWZZWld1OE1IbnJBTQ?oc=5","source":"Energy Watch","date":"23 Mar 2026","section":"SUBSIDY CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"Commission approves €5 billion Danish State aid scheme to support offshore wind energy","link":"https://ec.europa.eu/commission/presscorner/detail/en/ip_26_655","source":"EC — Competition press releases","date":"22 Mar 2026","section":"SUBSIDY CONTROL","opp":"SUBSIDY ASSESSMENT","opp_col":"#28B463","cat":"COMPETITION"}],"GBR":[{"title":"Rethinking global imbalances: drivers, risks, and policy priorities","link":"https://www.bankofengland.co.uk/paper/2026/rethinking-global-imbalances","source":"Bank of England — News","date":"23 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"FCA Opens Investigation into MFS -","link":"https://news.google.com/rss/articles/CBMie0FVX3lxTE5wMFpJd1Z3V2J5N29ORHEtbDAwQUJCdVJkZ1dsbWplcUc5dmQ2TS1QcWtkWDBqZFE1VjJvMHhtYVpwZ0daVVVYUFg0czRBalpzUlpOTVZ4YnlNQmxxVGRHQ0hGT3NxWWZVQkJCRW12RFgxR3RwdFowbWN0OA?oc=5","source":"Insurance Edge","date":"23 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"ENFORCEMENT DEFENCE","opp_col":"#D35400","cat":"COMPETITION"},{"title":"Ofwat issues early rejection of proposal to remove market performance charges","link":"https://news.google.com/rss/articles/CBMivgFBVV95cUxOTkNnMVhrRDBoQ1BaQlhKS0pUSUpXSV92eGh5bFNuODE5OU4tbERQX1pzcTN1V3REd0R6TldNLTRtZnByaklqRk9Fcnh5ZnJHT2dvblU1czl5bUNqNUVXbDFFNE84OVEtU3o1eEd6WmRUbmdWN3ZWTV9henlFWldvM09vdEhpdFZueFF3a1JEYnZOal9ZMzFOcHppaGZlUGZ3eHBPVWdLRi1nN2lkcDJuSXJuWWtYZkZzd3dOT2xn?oc=5","source":"Water Magazine","date":"23 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"Testing the Boundaries of Competition Law: The Expansion of the UK Collective Proceedings Regime","link":"https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcGw5SXBOcXdUS1UxaldHY3ZtclhWbkJQaklpTnpfVVM5SGlBaTdtNUNZX1V6OU9ONnJhcFl5VC14OXZnLVFVcWlsRkpGUHJIMXc5OUViY0Y5eDVVa196RmhPZTBUR2FPN20wUDFxX0RLQmFyUFV0bFJQZkd1TGxoRkpBVV9Mekl5LTFJcjdMTTRYS2x1cnI0dTNkMjR2bndhMGxDUVVNT0J5ZVcwcThlU3ZBbGx6amRjRHdkY3ZqcUhwa0JSQTk4SElUTENTa3V6OXRyR1llZmw?oc=5","source":"Concurrences","date":"22 Mar 2026","section":"COLLECTIVE ACTIONS AND DISPUTES","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"DEU":[{"title":"Main Developments in Competition Law and Policy 2025 – Germany","link":"https://news.google.com/rss/articles/CBMitgFBVV95cUxOU2phS0hzRkJBV05xQlVueHE3TU9MZF94VmExOE1Jb2VaOTlNWFl0YmVjWGtXNzBLd1BQc0hTOEhVWGh5ZlRyQkNfUHZQTXJhZGNBaFhxNF9DTC1RbjFfR1ZZSnVTeDVfQURLME1IWk92UUNYdW1TbFRaS0VhYjBQMEFpUTRIem5DOWs5V3I4bkRRNXM0UEFlc05fa2NxaENobDhWSjlId3dLaDJZbFlkblA5WGdzZw?oc=5","source":"Wolters Kluwer","date":"23 Mar 2026","section":"COMPETITION AND CONSUMER ENFORCEMENT","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"FRA":[{"title":"Commission approves French State aid scheme for production of renewable and low-carbon hydrogen","link":"https://ec.europa.eu/commission/presscorner/detail/en/ip_26_656","source":"EC — Competition press releases","date":"22 Mar 2026","section":"SUBSIDY CONTROL","opp":"SUBSIDY ASSESSMENT","opp_col":"#28B463","cat":"COMPETITION"},{"title":"French Ski Instructors’ Union Fined €3.4 Million Over Anti-Competition Rules","link":"https://news.google.com/rss/articles/CBMioAFBVV95cUxPcVJqRjB0U2ZCck41NG0yN0VYaVhtU0tBbDVoTU5rZmdnN0RzcGdOakk5RllwbTZGTWp1cWpfREl5Y1B0NE9VWFF1S0Q3eFJFaE1KNXk1cThPTndjdGVvZ0NIMkxJa1lEeV81MW45em5NY19vbGVwVGFLSDdGRTQ3VldFVVIxUW9vOF80OTZkc21CVjZpb01qNVJNNTBaWGRs?oc=5","source":"SnowBrains","date":"21 Mar 2026","section":"COMPETITION AND CONSUMER ENFORCEMENT","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"SVN":[{"title":"SCPA does not oppose the acquisition of control over Leder & Schuh","link":"https://www.varstvo-konkurence.si/en/information-centre/single-news/scpa-does-not-oppose-the-acquisition-of-control-over-leder-schuh/","source":"AVK — Slovenian Competition Authority","date":"19 Mar 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"SCPA does not oppose the acquisition of control over the company Mercator-Emba","link":"https://www.varstvo-konkurence.si/en/information-centre/single-news/spca-does-not-oppose-the-acquisition-of-control-over-the-company-mercator-emba/","source":"AVK — Slovenian Competition Authority","date":"18 Mar 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"SCPA does not oppose the acquisition of control over Sigur Retail Group","link":"https://www.varstvo-konkurence.si/en/information-centre/single-news/scpa-does-not-oppose-the-acquisition-of-control-over-sigur-retail-group/","source":"AVK — Slovenian Competition Authority","date":"18 Mar 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}]};
-var countData   = {"FIN":1,"IRL":1,"DNK":2,"GBR":4,"DEU":1,"FRA":2,"SVN":3};
+var articleData = {"FIN":[{"title":"The time limit for processing the merger of Saferoad, Cleanosol and Tiemerkintä A & E has been extended until 8 May 2026","link":"https://www.kkv.fi/en/current/press-releases/the-time-limit-for-processing-the-merger-of-saferoad-cleanosol-and-tiemerkinta-a-e-has-been-extended-until-8-may-2026/","source":"KKV — Finnish Competition and Consumer Authority","date":"08 May 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"IRL":[{"title":"CCPC welcomes public consultation on proposed changes to merger notification thresholds","link":"https://www.ccpc.ie/business/ccpc-welcomes-public-consultation-on-proposed-changes-to-merger-notification-thresholds/","source":"CCPC (Ireland)","date":"23 Mar 2026","section":"MERGER CONTROL","opp":"M&A CLEARANCE","opp_col":"#E74C3C","cat":"COMPETITION"}],"DNK":[{"title":"Developers threaten appeal to EU Court of Justice following Denmark's major subsidy approval","link":"https://news.google.com/rss/articles/CBMie0FVX3lxTE5qSXpkcjNZMVVkakNhNFZ2TDAxOVVXR19Eb0JBNm1NX0FWZnAxN245Q0xULXhZM3pacjFiMFpId0FxQjdSWDVRWWpvMmUtekpJUDVYNzJOVk9qRjlhb3lTdTJiMGtiTHQzMHJzODNnQWZZWld1OE1IbnJBTQ?oc=5","source":"Energy Watch","date":"23 Mar 2026","section":"SUBSIDY CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"Commission approves €5 billion Danish State aid scheme to support offshore wind energy","link":"https://ec.europa.eu/commission/presscorner/detail/en/ip_26_655","source":"EC — Competition press releases","date":"22 Mar 2026","section":"SUBSIDY CONTROL","opp":"SUBSIDY ASSESSMENT","opp_col":"#28B463","cat":"COMPETITION"}],"GBR":[{"title":"Rethinking global imbalances: drivers, risks, and policy priorities","link":"https://www.bankofengland.co.uk/paper/2026/rethinking-global-imbalances","source":"Bank of England — News","date":"23 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"FCA Opens Investigation into MFS -","link":"https://news.google.com/rss/articles/CBMie0FVX3lxTE5wMFpJd1Z3V2J5N29ORHEtbDAwQUJCdVJkZ1dsbWplcUc5dmQ2TS1QcWtkWDBqZFE1VjJvMHhtYVpwZ0daVVVYUFg0czRBalpzUlpOTVZ4YnlNQmxxVGRHQ0hGT3NxWWZVQkJCRW12RFgxR3RwdFowbWN0OA?oc=5","source":"Insurance Edge","date":"23 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"ENFORCEMENT DEFENCE","opp_col":"#D35400","cat":"COMPETITION"},{"title":"Ofwat issues early rejection of proposal to remove market performance charges","link":"https://news.google.com/rss/articles/CBMivgFBVV95cUxOTkNnMVhrRDBoQ1BaQlhKS0pUSUpXSV92eGh5bFNuODE5OU4tbERQX1pzcTN1V3REd0R6TldNLTRtZnByaklqRk9Fcnh5ZnJHT2dvblU1czl5bUNqNUVXbDFFNE84OVEtU3o1eEd6WmRUbmdWN3ZWTV9henlFWldvM09vdEhpdFZueFF3a1JEYnZOal9ZMzFOcHppaGZlUGZ3eHBPVWdLRi1nN2lkcDJuSXJuWWtYZkZzd3dOT2xn?oc=5","source":"Water Magazine","date":"23 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"Testing the Boundaries of Competition Law: The Expansion of the UK Collective Proceedings Regime","link":"https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcGw5SXBOcXdUS1UxaldHY3ZtclhWbkJQaklpTnpfVVM5SGlBaTdtNUNZX1V6OU9ONnJhcFl5VC14OXZnLVFVcWlsRkpGUHJIMXc5OUViY0Y5eDVVa196RmhPZTBUR2FPN20wUDFxX0RLQmFyUFV0bFJQZkd1TGxoRkpBVV9Mekl5LTFJcjdMTTRYS2x1cnI0dTNkMjR2bndhMGxDUVVNT0J5ZVcwcThlU3ZBbGx6amRjRHdkY3ZqcUhwa0JSQTk4SElUTENTa3V6OXRyR1llZmw?oc=5","source":"Concurrences","date":"22 Mar 2026","section":"COLLECTIVE ACTIONS AND DISPUTES","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"DEU":[{"title":"Main Developments in Competition Law and Policy 2025 – Germany","link":"https://news.google.com/rss/articles/CBMitgFBVV95cUxOU2phS0hzRkJBV05xQlVueHE3TU9MZF94VmExOE1Jb2VaOTlNWFl0YmVjWGtXNzBLd1BQc0hTOEhVWGh5ZlRyQkNfUHZQTXJhZGNBaFhxNF9DTC1RbjFfR1ZZSnVTeDVfQURLME1IWk92UUNYdW1TbFRaS0VhYjBQMEFpUTRIem5DOWs5V3I4bkRRNXM0UEFlc05fa2NxaENobDhWSjlId3dLaDJZbFlkblA5WGdzZw?oc=5","source":"Wolters Kluwer","date":"23 Mar 2026","section":"COMPETITION AND CONSUMER ENFORCEMENT","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"FRA":[{"title":"Business Market","link":"https://en.arcep.fr/news/press-releases/view/n/business-market-230326.html","source":"ARCEP — French Telecoms Regulator","date":"23 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"Commission approves French State aid scheme for production of renewable and low-carbon hydrogen","link":"https://ec.europa.eu/commission/presscorner/detail/en/ip_26_656","source":"EC — Competition press releases","date":"22 Mar 2026","section":"SUBSIDY CONTROL","opp":"SUBSIDY ASSESSMENT","opp_col":"#28B463","cat":"COMPETITION"},{"title":"Audiovisual and DTT Broadcasting","link":"https://en.arcep.fr/news/press-releases/view/n/audiovisual-and-dtt-broadcasting-200326.html","source":"ARCEP — French Telecoms Regulator","date":"20 Mar 2026","section":"DIGITAL MARKETS AND REGULATED SECTORS","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}],"SVN":[{"title":"SCPA does not oppose the acquisition of control over Leder & Schuh","link":"https://www.varstvo-konkurence.si/en/information-centre/single-news/scpa-does-not-oppose-the-acquisition-of-control-over-leder-schuh/","source":"AVK — Slovenian Competition Authority","date":"19 Mar 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"SCPA does not oppose the acquisition of control over the company Mercator-Emba","link":"https://www.varstvo-konkurence.si/en/information-centre/single-news/spca-does-not-oppose-the-acquisition-of-control-over-the-company-mercator-emba/","source":"AVK — Slovenian Competition Authority","date":"18 Mar 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"},{"title":"SCPA does not oppose the acquisition of control over Sigur Retail Group","link":"https://www.varstvo-konkurence.si/en/information-centre/single-news/scpa-does-not-oppose-the-acquisition-of-control-over-sigur-retail-group/","source":"AVK — Slovenian Competition Authority","date":"18 Mar 2026","section":"MERGER CONTROL","opp":"MONITOR","opp_col":"#95A5A6","cat":"COMPETITION"}]};
+var countData   = {"FIN":1,"IRL":1,"DNK":2,"GBR":4,"DEU":1,"FRA":3,"SVN":3};
 
 // Numeric ISO → alpha-3 for European countries
 var isoNum = {
@@ -767,13 +713,10 @@ function showPanel(iso, countryName) {
 </style>
 </div>
 <div class="tab-pane" id="pane-market_assessments"><h2 class="sec-hdr">MARKET ASSESSMENTS <span class="sec-n">(0)</span></h2><p class="empty-msg">No items in this period.</p></div>
-<div class="tab-pane" id="pane-digital_markets"><h2 class="sec-hdr">DIGITAL MARKETS AND REGULATED SECTORS <span class="sec-n">(9)</span></h2><h3 class="region-hdr">EU / EUROPE</h3>
+<div class="tab-pane" id="pane-digital_markets"><h2 class="sec-hdr">DIGITAL MARKETS AND REGULATED SECTORS <span class="sec-n">(10)</span></h2><h3 class="region-hdr">EU / EUROPE</h3>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQQ2JsaFZqdDV1VDB4UWVkdnBYVksyMUdYSlBNaVp4Y0tXVHp1aEF6c0RZTWp6QzB5UndtTVJOQVJ1dm1vTTBmWTl6dTlLS2p4YmJHMW9KVmE3X3NFajZwdTZqS2pKRXpnOUU0Rkk1TzRGUUlyZzJXd0VhaHRXUTY0Y3Q2V2lVOVBkdXZrdC1Pd3V5ZEFTUTFZbFk4RGFBQ2FzNmZkS0ZtSk9aN0gycHZZWA?oc=5" target="_blank" class="hl-link">EU Urged to Classify TV OS and AI Assistants as Gatekeepers Under Digital Rules - News and Statistics</a></h3><div class="entity-row"><span class="entity-chip">Urged</span> <span class="entity-chip">Classify TV OS</span> <span class="entity-chip">AI Assistants</span> <span class="entity-chip">Gatekeepers</span></div><div class="item-meta">23 Mar 2026  12:20 &nbsp;|&nbsp; IndexBox &nbsp;|&nbsp; EU &nbsp;|&nbsp; digital, AI</div></article>
 <h3 class="region-hdr">OTHER</h3>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxQSmt3WkNsZ25oeWdPM0lMcVc3UlJVM3dlVUZGb0pFclBRclk0V2FBU05jM1pINDlYbnRERWU5cjNMZjVCQkZVZk1LOXVraEN3VVNybm40RmVRcWNPSkVNNkxQbVh6YVlxQl80Q3VZYmFSbk9yRU52ZjRHZ2ZDRXRUUmFlOEV0R2NvZzN6X0FjM1pXSzRFbGlraHpJSXNtOEFUUEZhTQ?oc=5" target="_blank" class="hl-link">Loaded premiums: The individual fair value question remains</a></h3><div class="entity-row"><span class="entity-chip">Loaded</span></div><div class="item-meta">23 Mar 2026  12:17 &nbsp;|&nbsp; Cover Magazine</div></article>
-<h3 class="region-hdr">EU / EUROPE</h3>
-<article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQN1N5UmpkSXdNVmR2WmJaMU1GdFJzdmtZOUtaVWJ1bUltZ3JkalNWUW1ENUVlUWRXRWltYmUyc1FaUFdJNWhqMFFSckRhYVVwQnF4N3RYUFBaZmNtcWUxa1hxZWN0TFdHMlFHY2lBRFJ4QzZtMHExZ21vVk1uLVpFaDJjYzNXb28xRHh6ZFdiblZ6aFlLdHl1ek5FaWhsWENwUENTd1AtM195TE05S0UxVnpTeFp5Y2lXRzJWRFBMRU9maFNWQzFwVWpR?oc=5" target="_blank" class="hl-link">Exclusive-EU digital rules should apply to Big Tech’s smart TVs, broadcasters tell antitrust chief</a></h3><div class="entity-row"><span class="entity-chip">Exclusive-EU</span> <span class="entity-chip">Tech’s</span> <span class="entity-chip">TVs</span></div><div class="item-meta">23 Mar 2026  09:57 &nbsp;|&nbsp; 1470 &amp; 100.3 WMBD &nbsp;|&nbsp; EU &nbsp;|&nbsp; digital, tech</div></article>
-<h3 class="region-hdr">OTHER</h3>
 <article class="item"><h3 class="item-hl"><a href="https://www.bankofengland.co.uk/paper/2026/rethinking-global-imbalances" target="_blank" class="hl-link">Rethinking global imbalances: drivers, risks, and policy priorities</a></h3><div class="entity-row"><span class="entity-chip">Rethinking</span></div><div class="item-meta">23 Mar 2026  09:30 &nbsp;|&nbsp; Bank of England — News &nbsp;|&nbsp; England, global &nbsp;|&nbsp; paper</div><p class="item-desc">Bank of England Staff Discussion Paper</p></article>
 <h3 class="region-hdr">EU / EUROPE</h3>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQeTNDRGpWX2FmTlNrU0VXNURrT1lPVlhURWlQU1ZBeW1mNUMwYnlFR25OT2JqdXBUNTZkeTk0ZHpFOFVGQ1o3d2ViZ2QyYnVobW05X0I1UHpUZVVLSFE5UTZSR2VLc3lUd3lkNndrY2ZiNjNhZFR1NTVZVWgtSmlsaFBTQWNaUlk3bzFodFRZUDBRZmpaampMaDZxbTJkbzVzcTdHVmhGb1FlNkR3RVMyNlVjdER1U1d5TmV4Qk1RR283OW5HWlFDWlRVWV91dElqTFk5ODF2M2lMeWxwNnAyQjVSYjVjUzhn?oc=5" target="_blank" class="hl-link">Exclusive: Broadcasters urge EU to tighten rules for Big Tech in smart TV standoff</a></h3><div class="entity-row"><span class="entity-chip">Exclusive: Broadcasters</span> <span class="entity-chip">TV</span></div><div class="item-meta">23 Mar 2026  09:01 &nbsp;|&nbsp; Reuters &nbsp;|&nbsp; EU &nbsp;|&nbsp; tech</div></article>
@@ -782,8 +725,10 @@ function showPanel(iso, countryName) {
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE94WWZ3S000WjBBVDdRR0lndmRfeHg1TjdvTDVjWU4yZVpPZDlCaDg2ZUxVNEZwMlVEemY0eFFzNG1DX21HTDBYdzM3S192eWlzWGg5eHZ6bnBBemR6WEZJZmNadHl1dmdCZFkwc3FKNUs0NWxYc0FmMTJvckg?oc=5" target="_blank" class="hl-link">Environment groups seek to overturn data centre decision</a></h3><div class="entity-row"><span class="entity-chip">Environment</span></div><div class="item-meta">23 Mar 2026  06:04 &nbsp;|&nbsp; RTE.ie &nbsp;|&nbsp; data</div></article>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOTkNnMVhrRDBoQ1BaQlhKS0pUSUpXSV92eGh5bFNuODE5OU4tbERQX1pzcTN1V3REd0R6TldNLTRtZnByaklqRk9Fcnh5ZnJHT2dvblU1czl5bUNqNUVXbDFFNE84OVEtU3o1eEd6WmRUbmdWN3ZWTV9henlFWldvM09vdEhpdFZueFF3a1JEYnZOal9ZMzFOcHppaGZlUGZ3eHBPVWdLRi1nN2lkcDJuSXJuWWtYZkZzd3dOT2xn?oc=5" target="_blank" class="hl-link">Ofwat issues early rejection of proposal to remove market performance charges</a></h3><div class="entity-row"><span class="entity-chip">Ofwat</span></div><div class="item-meta">23 Mar 2026  05:05 &nbsp;|&nbsp; Water Magazine &nbsp;|&nbsp; water</div></article>
 <h3 class="region-hdr">EU / EUROPE</h3>
-<article class="item"><div class="opp-row"><span class="opp-badge" style="background:#2980B9">DIGITAL MARKETS</span></div><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbEtia0FKMTE0ckloMXpscW9GS09kTEpfaFhhZFFDMW85b2NuTXlXYlVQdFRSaUp0YVlrazNzUF9LbWZLb09VRGlEaGZnNmRscW5TM3NBYVNFN0tpWkVsb2ZWMERRYmNzNWFTVVhERjRjZFNjSnVuRWxBZ296ck5ydjBYUUFZWGZxMUJPM2Jnei02cDRSNzJpb1VnQnFFOG9RZXFTNzFJTXU?oc=5" target="_blank" class="hl-link">Sixth meeting of the Digital Markets Act High-Level Group</a></h3><div class="entity-row"><span class="entity-chip">Sixth</span> <span class="entity-chip">High-Level Group</span></div><div class="item-meta">20 Mar 2026  20:39 &nbsp;|&nbsp; digital-markets-act.ec.europa.eu &nbsp;|&nbsp; digital</div></article></div>
-<div class="tab-pane" id="pane-merger_control"><h2 class="sec-hdr">MERGER CONTROL <span class="sec-n">(9)</span></h2><h3 class="region-hdr">EU / EUROPE</h3>
+<article class="item"><h3 class="item-hl"><a href="https://en.arcep.fr/news/press-releases/view/n/business-market-230326.html" target="_blank" class="hl-link">Business Market</a></h3><div class="entity-row"><span class="entity-chip">Business</span></div><div class="item-meta">23 Mar 2026  00:00 &nbsp;|&nbsp; ARCEP — French Telecoms Regulator &nbsp;|&nbsp; French</div></article>
+<article class="item"><div class="opp-row"><span class="opp-badge" style="background:#2980B9">DIGITAL MARKETS</span></div><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbEtia0FKMTE0ckloMXpscW9GS09kTEpfaFhhZFFDMW85b2NuTXlXYlVQdFRSaUp0YVlrazNzUF9LbWZLb09VRGlEaGZnNmRscW5TM3NBYVNFN0tpWkVsb2ZWMERRYmNzNWFTVVhERjRjZFNjSnVuRWxBZ296ck5ydjBYUUFZWGZxMUJPM2Jnei02cDRSNzJpb1VnQnFFOG9RZXFTNzFJTXU?oc=5" target="_blank" class="hl-link">Sixth meeting of the Digital Markets Act High-Level Group</a></h3><div class="entity-row"><span class="entity-chip">Sixth</span> <span class="entity-chip">High-Level Group</span></div><div class="item-meta">20 Mar 2026  20:39 &nbsp;|&nbsp; digital-markets-act.ec.europa.eu &nbsp;|&nbsp; digital</div></article>
+<article class="item"><h3 class="item-hl"><a href="https://en.arcep.fr/news/press-releases/view/n/audiovisual-and-dtt-broadcasting-200326.html" target="_blank" class="hl-link">Audiovisual and DTT Broadcasting</a></h3><div class="entity-row"><span class="entity-chip">Audiovisual</span> <span class="entity-chip">DTT Broadcasting</span></div><div class="item-meta">20 Mar 2026  00:00 &nbsp;|&nbsp; ARCEP — French Telecoms Regulator &nbsp;|&nbsp; French &nbsp;|&nbsp; broadcasting</div></article></div>
+<div class="tab-pane" id="pane-merger_control"><h2 class="sec-hdr">MERGER CONTROL <span class="sec-n">(8)</span></h2><h3 class="region-hdr">EU / EUROPE</h3>
 <article class="item"><h3 class="item-hl"><a href="https://www.kkv.fi/en/current/press-releases/the-time-limit-for-processing-the-merger-of-saferoad-cleanosol-and-tiemerkinta-a-e-has-been-extended-until-8-may-2026/" target="_blank" class="hl-link">The time limit for processing the merger of Saferoad, Cleanosol and Tiemerkintä A &amp; E has been extended until 8 May 2026</a></h3><div class="entity-row"><span class="entity-chip">Saferoad, Cleanosol</span> <span class="entity-chip">Tiemerkint</span></div><div class="item-meta">08 May 2026  00:00 &nbsp;|&nbsp; KKV — Finnish Competition and Consumer Authority &nbsp;|&nbsp; Finnish, KKV</div></article>
 <h3 class="region-hdr">OTHER</h3>
 <article class="item"><div class="opp-row"><span class="opp-badge" style="background:#E74C3C">M&amp;A CLEARANCE</span></div><div class="opp-note">&#128188; Deal parties need competition clearance support and bidding/switching analysis</div><h3 class="item-hl"><a href="https://www.ccpc.ie/business/ccpc-welcomes-public-consultation-on-proposed-changes-to-merger-notification-thresholds/" target="_blank" class="hl-link">CCPC welcomes public consultation on proposed changes to merger notification thresholds</a></h3><div class="entity-row"><span class="entity-chip">CCPC</span></div><div class="item-meta">23 Mar 2026  15:17 &nbsp;|&nbsp; CCPC (Ireland) &nbsp;|&nbsp; Ireland, CCPC</div><p class="item-desc">23 March 2026 &amp;#8211; The Competition and Consumer Protection Commission (CCPC) welcomes the launch by the Minister for Enterprise, Tourism and Employment of a public consultation on proposals to raise the financial thresholds at which mergers &amp;#8230; The post CCPC welcomes public consultation on proposed changes to merger notification thresholds appeared first on CCPC Business.</p></article>
@@ -791,25 +736,22 @@ function showPanel(iso, countryName) {
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxNWGJYX1N6MnpKVkdkZ1k0bFRXMU9paDVtcjdhVEVjUjBLbzlQaG5FRjI0OUZudFE5eFdqVjlDSTV6NkVfRWFDWF9ScTcyQkp0ZUhEWWkyVlVKQkxuQkF1d2NLTGppalE1WFQ1Y2IyTmdTRVcwUGVBZ0FDbEZ0UkhLcXREZnl4LUNMMkMzaXhlUzRhVGdFWFJiT3NKOTZVOVpuUy12NE55Nm5LSEczWGwwNExiMXQ3clNGSzU0MS1OUjZ1Z19TZW1Zck8wNlozdw?oc=5" target="_blank" class="hl-link">Ceridian HCM Holding stock faces acquisition buzz amid HCM software demand surge</a></h3><div class="entity-row"><span class="entity-chip">Ceridian HCM Holding</span> <span class="entity-chip">HCM</span></div><div class="item-meta">22 Mar 2026  11:57 &nbsp;|&nbsp; AD HOC NEWS &nbsp;|&nbsp; software</div></article>
 <h3 class="region-hdr">US</h3>
 <article class="item"><h3 class="item-hl"><a href="https://globalcompetitionreview.com/gcr-usa/article/doj-waves-through-nexstar-merger-despite-state-anger" target="_blank" class="hl-link">DOJ waves through Nexstar merger despite state anger</a></h3><div class="entity-row"><span class="entity-chip">Nexstar</span></div><div class="item-meta">20 Mar 2026  22:27 &nbsp;|&nbsp; Global Competition Review &nbsp;|&nbsp; DOJ</div><p class="item-desc">The Department of Justice has allowed Nexstar to buy TV rival Tegna for $6.2 billion, including 11 stations that the Trump Administration once mandated it sell off to prevent higher bills for “millions” of consumers and many small businesses.</p></article>
-<h3 class="region-hdr">OTHER</h3>
-<article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxPbERkZy0zVlMtTTIxUV9yVm1tekZQOEZrTnM3bjNXOVJQVGEybTNxeThMZC03SGVWZFliYmJBcmhadUpsTG93NnhxVEszUmxMVnJZZmtubElodVJKd1R3UmpkU1VSQTdyR0lyNHJ2c1JjX1FPdFRKUEo3OE1kOWxjOW5Gd05OZ0tER3JlUXVEcU9sZ3duanFaTXFQNjNOQWNGQVc5WEJpbkJiMFRzVjZFdElCLVhOaVdJSmdaTEFjSEl3WWxGZUkxNDFXSF9XUQ?oc=5" target="_blank" class="hl-link">Caesars Entertainment stock faces renewed takeover buzz as Tilman Fertitta bid speculation lifts sha</a></h3><div class="entity-row"><span class="entity-chip">Caesars Entertainment</span> <span class="entity-chip">Tilman Fertitta</span></div><div class="item-meta">20 Mar 2026  16:20 &nbsp;|&nbsp; AD HOC NEWS</div></article>
 <h3 class="region-hdr">EU / EUROPE</h3>
 <article class="item"><h3 class="item-hl"><a href="https://www.varstvo-konkurence.si/en/information-centre/single-news/scpa-does-not-oppose-the-acquisition-of-control-over-leder-schuh/" target="_blank" class="hl-link">SCPA does not oppose the acquisition of control over Leder &amp; Schuh</a></h3><div class="entity-row"><span class="entity-chip">SCPA</span> <span class="entity-chip">Leder</span> <span class="entity-chip">Schuh</span></div><div class="item-meta">19 Mar 2026  00:00 &nbsp;|&nbsp; AVK — Slovenian Competition Authority &nbsp;|&nbsp; Slovenian, AVK</div></article>
 <article class="item"><h3 class="item-hl"><a href="https://www.varstvo-konkurence.si/en/information-centre/single-news/spca-does-not-oppose-the-acquisition-of-control-over-the-company-mercator-emba/" target="_blank" class="hl-link">SCPA does not oppose the acquisition of control over the company Mercator-Emba</a></h3><div class="entity-row"><span class="entity-chip">SCPA</span> <span class="entity-chip">Mercator-Emba</span></div><div class="item-meta">18 Mar 2026  00:00 &nbsp;|&nbsp; AVK — Slovenian Competition Authority &nbsp;|&nbsp; Slovenian, AVK</div></article>
 <article class="item"><h3 class="item-hl"><a href="https://www.varstvo-konkurence.si/en/information-centre/single-news/scpa-does-not-oppose-the-acquisition-of-control-over-sigur-retail-group/" target="_blank" class="hl-link">SCPA does not oppose the acquisition of control over Sigur Retail Group</a></h3><div class="entity-row"><span class="entity-chip">SCPA</span> <span class="entity-chip">Sigur Retail Group</span></div><div class="item-meta">18 Mar 2026  00:00 &nbsp;|&nbsp; AVK — Slovenian Competition Authority &nbsp;|&nbsp; Slovenian, AVK &nbsp;|&nbsp; retail</div></article></div>
-<div class="tab-pane" id="pane-enforcement"><h2 class="sec-hdr">COMPETITION AND CONSUMER ENFORCEMENT <span class="sec-n">(10)</span></h2><h3 class="region-hdr">EU / EUROPE</h3>
+<div class="tab-pane" id="pane-enforcement"><h2 class="sec-hdr">COMPETITION AND CONSUMER ENFORCEMENT <span class="sec-n">(9)</span></h2><h3 class="region-hdr">EU / EUROPE</h3>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOU2phS0hzRkJBV05xQlVueHE3TU9MZF94VmExOE1Jb2VaOTlNWFl0YmVjWGtXNzBLd1BQc0hTOEhVWGh5ZlRyQkNfUHZQTXJhZGNBaFhxNF9DTC1RbjFfR1ZZSnVTeDVfQURLME1IWk92UUNYdW1TbFRaS0VhYjBQMEFpUTRIem5DOWs5V3I4bkRRNXM0UEFlc05fa2NxaENobDhWSjlId3dLaDJZbFlkblA5WGdzZw?oc=5" target="_blank" class="hl-link">Main Developments in Competition Law and Policy 2025 – Germany</a></h3><div class="entity-row"><span class="entity-chip">Main Developments</span> <span class="entity-chip">Germany</span></div><div class="item-meta">23 Mar 2026  09:15 &nbsp;|&nbsp; Wolters Kluwer &nbsp;|&nbsp; Germany</div></article>
 <h3 class="region-hdr">OTHER</h3>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOV1lnWnJsdVh4WDR0SmswUWoyYkY5VUd4SGVRNm5NM1VwRDhCSVg5N1hEWHc5WlI3VlN0Tm1wVmNQUVA5QVU0aGt6ekRZR21oaXIxdkRvOWI2MGZGOW83WHNWOVZmc0FaZGJJeWhDblhZRkNoZWJWREhJVmpkb21ROGhVdzJ4Q243X1d2NDNqeVdoa2wtWlN2VHc4WnRFMHR0Y2tuWnVBUWJTWEEzd3d2NUlnSDFYVVRKSlE?oc=5" target="_blank" class="hl-link">Ministry of Economics Warns of Risks of Criminalization of Cartel Agreements</a></h3><div class="entity-row"><span class="entity-chip">Ministry</span> <span class="entity-chip">Economics</span> <span class="entity-chip">Risks</span> <span class="entity-chip">Criminalization</span></div><div class="item-meta">22 Mar 2026  18:41 &nbsp;|&nbsp; Inbox.lv</div></article>
 <h3 class="region-hdr">EU / EUROPE</h3>
-<article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPcVJqRjB0U2ZCck41NG0yN0VYaVhtU0tBbDVoTU5rZmdnN0RzcGdOakk5RllwbTZGTWp1cWpfREl5Y1B0NE9VWFF1S0Q3eFJFaE1KNXk1cThPTndjdGVvZ0NIMkxJa1lEeV81MW45em5NY19vbGVwVGFLSDdGRTQ3VldFVVIxUW9vOF80OTZkc21CVjZpb01qNVJNNTBaWGRs?oc=5" target="_blank" class="hl-link">French Ski Instructors’ Union Fined €3.4 Million Over Anti-Competition Rules</a></h3><div class="entity-row"><span class="entity-chip">French Ski Instructors’ Union Fined</span> <span class="entity-chip">Million</span> <span class="entity-chip">Anti-Competition Rules</span></div><div class="item-meta">21 Mar 2026  09:35 &nbsp;|&nbsp; SnowBrains &nbsp;|&nbsp; French</div></article>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxNQnEyOF9RZ0JYNVdjU1A3WTc1c0g2aVQtU0FmSXVkd1phSFlMeGFXR2ZYTVJDXzdfbXNfT0ZNZ0R4SDk5S0d3MmozUGs0YTJVemlBSk1wczU4VWNicUJNZGZzb180VXRFY3p2UnM0S3VWWElZb2dRbGhvSWNTams1a0UzSkYxUFJFUThBOTFXUWxpZzBsUl9VaG5tb1UxU1hELVRhZGNpRDNyTjdfOXhMOEdQdkM4bTZjZzFNcnlTU2hRd2M2RzdpRHlJbERnTy1RSVFwRHlPRS0?oc=5" target="_blank" class="hl-link">The Requirement of Meeting of Minds: Horizontal and Vertical Agreements in EU Competition Law</a></h3><div class="entity-row"><span class="entity-chip">Requirement</span> <span class="entity-chip">Meeting</span> <span class="entity-chip">Minds: Horizontal</span> <span class="entity-chip">Vertical Agreements</span></div><div class="item-meta">21 Mar 2026  04:48 &nbsp;|&nbsp; Concurrences &nbsp;|&nbsp; EU</div></article>
 <h3 class="region-hdr">OTHER</h3>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxNQlAybEItMlhhNERWQlZUYnl1UlhhSHM5OERSNlF2QnczcTl3RXpEUF9iYmJpM2lzclltMXdaNGJWUUx1ZHJaamNIX2tfcVc5NWpxTFc3Qi1RMmVINGU2R2FxZUNnaHZyOGo0ZHo4bmZaS1ZDWXNQRnl0QzlUMWJoY3hJTEdDb3pMQUFkNmlWMGlGOThNdzctcXhYbUVURzlFQW5uM3pwRDV6Z3djQlpjaDlObDMwWG9sQnE4aFN0X3pjNlNXWXVyNXBMdkVzNFI4U1E?oc=5" target="_blank" class="hl-link">Semper aliquid novi Africam adferre Balancing Socio-Economic Goals with Competition Law</a></h3><div class="entity-row"><span class="entity-chip">Semper</span> <span class="entity-chip">Africam</span> <span class="entity-chip">Balancing Socio-Economic Goals</span></div><div class="item-meta">21 Mar 2026  00:40 &nbsp;|&nbsp; Concurrences</div></article>
 <h3 class="region-hdr">EU / EUROPE</h3>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxQNEZhdTVqaVJSbHJGMGNmOXlQWVltaDVERE05bzhxTjAwLVljOHBwN1VLYk5QOFVKTHBiS2pqc2lLTHNyV3V3QzVtT2VRRHZSNHllRE5Eb2p0WEY2bVhOWTYxanpSOHNsR0pVLXRORFBaZkVsZVhxSGh5Z3ZPNHk4NUJwZUNUc21fWlBGWWt2YlZKSzd5alptSFowVGVkMXkxWl9Bd1lPMWRBN1VSS243S3BfaGVFdmFXZ3dWNkxCSjc2UUNWbndSZEd0bDBiUTFIYkl4WGJKX3o?oc=5" target="_blank" class="hl-link">National Judicial Review of EU Law Enforcement: Challenges in Creating the EU Competition Law Judicial Review Database</a></h3><div class="entity-row"><span class="entity-chip">Judicial</span> <span class="entity-chip">Enforcement: Challenges</span> <span class="entity-chip">Creating</span></div><div class="item-meta">21 Mar 2026  00:26 &nbsp;|&nbsp; Concurrences &nbsp;|&nbsp; EU</div></article>
 <h3 class="region-hdr">OTHER</h3>
-<article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMiggNBVV95cUxQYmk1WmhBWmFZNkp4QjM5R3Y5R1RNVGdidkVpUFoyWlB1MnduTmZQX0hSM0NqdHFFNGxWNS0zemdxQXZYSW5JSlMyWGdzZVdjT0ZIcjBjN0lOdEZtbzBuNVVDLXhDOWRrcWNNNjhrUzRaMjAzaW84bWs2Q3pYc0N5cjRnVEV3b2dueXo5d1M1MUtKYm9XQ05GNEZiSDNocXZMZlM3REpQMXdxQzAzMkFRRktkQWNxRUhvZDllMW1iZ0k3S2R3Y3hzeHdILWhCMXViZDZjcmUwNFg1MUNkNHg4TGRBSmZ5VGs2Q3pyT005RFNMVjZIc3hZSEJocG01ZXVweXM3SzB1MFlVbXlJRFhTV0VlR1RxR21ycDBXdU5yZ1pUcjlSZWx6eEZGdkFGUnlGRVhBOUlDaG1rTDJtWklpZ3I3RFFjcExKTXF3REpsYldaZGdSRm5lbHQyNW5RV2RaLXlGSVE1blFrU3ZfVFB5N0xwV2o5Mko3dzVWMnZ1bG9LQQ?oc=5" target="_blank" class="hl-link">The Threats and Bare-Knuckle Tactics of MAGA’s Top Antitrust Fixer</a></h3><div class="entity-row"><span class="entity-chip">Threats</span> <span class="entity-chip">Bare-Knuckle Tactics</span> <span class="entity-chip">MAGA’s Top</span> <span class="entity-chip">Fixer</span></div><div class="item-meta">21 Mar 2026  00:00 &nbsp;|&nbsp; WSJ</div></article>
+<article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMiggNBVV95cUxNbHZ4NWluQlJuWExpVEY4WTRYaUl2UEN6eTFBUi02WXRrajN3NHI4QmlYdWVFTVlVWDNWc3VvNmU1bFQxTExwSThYYUZ1b3RhZHdQcHdLLVdNd1BjZlA2WmdNZkxvMzVKZklQaUtnMF9oNHlrLTRaQ1F5c3pnSnB0WmpfZFFTa3FqNjh5dVlISVlzaExsdGdMSmoxSTd6aTdwdlBVbG5YSlA0UWtCS0FXNlVMMEYtU2Zfd05yb1NNaGU3SkxVTlV1aFVVT2I1cDhOaU40UmRaN2tFTTIxa0U0SjhoSmpkZmZvdkFDRGUxYVFHbUlDcTZ2T0pjR3huRVQzNW5Zbmo5bDFNUEplSWN2STJObk1DVFhad0RiTGdNWFkwU180d3dfS2haU3FDek1tUmVLc0xJc2RfZW9yZkdPRjNkTDJUMENjMXFScTl4cmRwN2xDMXBjcHJOS2wtNmdpbWFvcXNXa0IzeWNWbGxDWG9TM2txVmZMRmdUOGEwcGdVZw?oc=5" target="_blank" class="hl-link">The Threats and Bare-Knuckle Tactics of MAGA’s Top Antitrust Fixer</a></h3><div class="entity-row"><span class="entity-chip">Threats</span> <span class="entity-chip">Bare-Knuckle Tactics</span> <span class="entity-chip">MAGA’s Top</span> <span class="entity-chip">Fixer</span></div><div class="item-meta">21 Mar 2026  00:00 &nbsp;|&nbsp; WSJ</div></article>
 <article class="item"><h3 class="item-hl"><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQLTRzajlrbWZFalRJRHhGUENrTkJ1N1g4WTlXc0pwZzQ0cXViMXNqZmNCbGFfaHMtbWdjblItY1ZQd3pyMGhMZjRNSndlbTZnR2Fqa3NVNG16LXJtYk5KWDh1Y3B3QlBWdW5ybi1JSlBDWFJ4RHZpbXE3cFhjdWpfQzUzbVM5U1kwa283c3A2dlE4SkRwWHlweA?oc=5" target="_blank" class="hl-link">On Simple Competition Policy</a></h3><div class="entity-row"><span class="entity-chip">Simple</span></div><div class="item-meta">20 Mar 2026  22:56 &nbsp;|&nbsp; Concurrences</div></article>
 <article class="item"><h3 class="item-hl"><a href="https://globalcompetitionreview.com/gcr-usa/article/states-still-discussing-live-nation-settlement" target="_blank" class="hl-link">States still discussing Live Nation settlement</a></h3><div class="entity-row"><span class="entity-chip">States</span> <span class="entity-chip">Live Nation</span></div><div class="item-meta">20 Mar 2026  18:40 &nbsp;|&nbsp; Global Competition Review</div><p class="item-desc">The states suing Live Nation for illegal monopolisation have submitted a settlement offer to the defendant, according to New York’s top antitrust enforcer.</p></article>
 <article class="item"><h3 class="item-hl"><a href="https://globalcompetitionreview.com/gcr-usa/article/the-brink-the-tipline-20-march-2026" target="_blank" class="hl-link">To the Brink: The Tipline for 20 March 2026</a></h3><div class="entity-row"><span class="entity-chip">Brink</span> <span class="entity-chip">Tipline</span></div><div class="item-meta">20 Mar 2026  18:27 &nbsp;|&nbsp; Global Competition Review &nbsp;|&nbsp; Commission, international &nbsp;|&nbsp; healthcare</div><p class="item-desc">The departure of antitrust leadership at the Department of Justice continues. Patty Brink, assistant chief of the Antitrust Division’s international section, is retiring this summer after more than 35 years of service. The head of the division’s New York office has also announced his resignation. Also in Tipline, the Federal Trade Commission has announced a new healthcare task force.</p></article></div>
@@ -856,7 +798,7 @@ function showPanel(iso, countryName) {
 <div class="lead-card" style="border-left-color:#2980B9"><div class="lead-header"><span class="lead-platform-badge" style="background:#0A66C2">in</span><span class="lead-service-tag">COLLECTIVE ACTIONS</span><span class="lead-source-meta">LinkedIn Pulse &nbsp;·&nbsp; 16 Mar 2026 · ↑0</span></div><div class="lead-hl"><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE56STAzSTFlQVhCOU96cmRTZkVNa0NZRkFLTFJldjhwaVZQVkhRX0hpRW44REF6ODVqUjd2eUFpNnlzanF6aGtxN3hyVFl3YW9PeE5lTUtB?oc=5" target="_blank" class="lead-hl-link">Stephen Critchley - Partner specialising in antitrust damages actions at the London office of Fieldfisher LLP - LinkedIn</a></div><p class="lead-desc">&amp;lt;a href=&quot;https://news.google.com/rss/articles/CBMiVkFVX3lxTE56STAzSTFlQVhCOU96cmRTZkVNa0NZRkFLTFJldjhwaVZQVkhRX0hpRW44REF6ODVqUjd2eUFpNnlzanF6aGtxN3hyVFl3YW9PeE5lTUtB?oc=5&quot; target=&quot;_blank&quot;&amp;gt;Stephen Critchley - Partner specialising in antitrust damages actions at the London office of Fieldfisher LLP&amp;lt;/a&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;lt;font colo...</p></div></div>
 </div>
 
-<footer>BD Intelligence Monitor v28 &nbsp;&middot;&nbsp; 2026-03-23 16:24</footer>
+<footer>BD Intelligence Monitor v28 &nbsp;&middot;&nbsp; 2026-03-23 16:50</footer>
 
 <script>
 function showTab(id) {
